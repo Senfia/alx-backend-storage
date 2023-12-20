@@ -19,6 +19,7 @@ def count_calls(method: Callable) -> Callable:
 
     return wrapper
 
+
 class PageCache:
     def __init__(self, redis_url: str = 'redis://localhost:6379/0'):
         self._redis = redis.Redis.from_url(redis_url)
